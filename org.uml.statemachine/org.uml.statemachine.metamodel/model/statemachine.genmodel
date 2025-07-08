@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/org.uml.statemachine.metamodel/src-gen" creationIcons="false"
+    editDirectory="/org.uml.statemachine.metamodel.edit/src-gen" editorDirectory="/org.uml.statemachine.metamodel.editor/src-gen"
+    modelPluginID="org.uml.statemachine.metamodel" modelName="Statemachine" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>statemachine.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="Statemachine" basePackage="org.uml.statemachine.metamodel"
+      disposableProviderFactory="true" ecorePackage="statemachine.ecore#/">
+    <genClasses ecoreClass="statemachine.ecore#//State">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute statemachine.ecore#//State/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute statemachine.ecore#//State/isInitial"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute statemachine.ecore#//State/isFinal"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference statemachine.ecore#//State/transition"/>
+    </genClasses>
+    <genClasses ecoreClass="statemachine.ecore#//Event">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute statemachine.ecore#//Event/name"/>
+    </genClasses>
+    <genClasses ecoreClass="statemachine.ecore#//Action">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute statemachine.ecore#//Action/code"/>
+    </genClasses>
+    <genClasses ecoreClass="statemachine.ecore#//Transition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute statemachine.ecore#//Transition/guard"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference statemachine.ecore#//Transition/event"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference statemachine.ecore#//Transition/action"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference statemachine.ecore#//Transition/state"/>
+    </genClasses>
+    <genClasses ecoreClass="statemachine.ecore#//StateMachine">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute statemachine.ecore#//StateMachine/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference statemachine.ecore#//StateMachine/transition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference statemachine.ecore#//StateMachine/state"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

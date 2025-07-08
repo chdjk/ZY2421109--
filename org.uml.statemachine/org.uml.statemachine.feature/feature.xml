@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.uml.statemachine.feature"
+      label="org.uml.statemachineFeature"
+      version="1.0.0.qualifier"
+      provider-name="RM2PT">
+
+   <description url="http://www.rm2pt.com/description">
+      [Enter Feature Description here.]
+   </description>
+
+   <copyright url="http://www.rm2pt.com/copyright">
+      [Enter Copyright Description here.]
+   </copyright>
+
+   <license url="http://www.rm2pt.com/license">
+      [Enter License Description here.]
+   </license>
+
+   <plugin
+         id="org.uml.statemachine.design"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.uml.statemachine.metamodel"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.uml.statemachine.metamodel.edit"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="org.uml.statemachine.metamodel.editor"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   </feature>
+
