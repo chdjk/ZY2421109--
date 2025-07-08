@@ -1,0 +1,194 @@
+MicroServiceModel LikeRead {
+	MicroService  {
+		ProvidedInterface register{
+			[Operation]
+			register
+		}
+		RequiredInterface manageArticle
+		RequiredInterface manageFollow
+		DomainModel  {
+			@AutoCRUD Entity User {
+				Userid : Integer
+				Password : String
+				Name : String
+				[Refer]
+			}
+		}
+	}
+	MicroService AdminService {
+		ProvidedInterface permission_management{
+			[Operation]
+			permission_management
+		}
+		ProvidedInterface freeze_account{
+			[Operation]
+			freeze_account
+		}
+		ProvidedInterface manage_home_page_push{
+			[Operation]
+			create_home_page_push
+			query_home_page_push
+			update_home_page_push
+			modify_home_page_push
+		}
+		ProvidedInterface manageReport{
+			[Operation]
+			createReport
+			queryReport
+			updateReport
+			modifyReport
+		}
+		ProvidedInterface managePermission{
+			[Operation]
+			createPermission
+			queryPermission
+			updatePermission
+			modifyPermission
+		}
+		DomainModel AdminService {
+			 Entity Report {
+				ReportId : Integer
+				Type : String
+				[Refer]
+			}
+			 Entity Permission {
+				Role : String
+				[Refer]
+			}
+		}
+	}
+	MicroService UserService {
+		ProvidedInterface shield{
+			[Operation]
+			shield
+		}
+		ProvidedInterface like{
+			[Operation]
+			like
+		}
+		ProvidedInterface ask_question{
+			[Operation]
+			ask_question
+		}
+		ProvidedInterface export_collection{
+			[Operation]
+			export_collection
+		}
+		ProvidedInterface answer_question{
+			[Operation]
+			answer_question
+		}
+		ProvidedInterface collection_content{
+			[Operation]
+			collection_content
+		}
+		ProvidedInterface post_comment{
+			[Operation]
+			post_comment
+		}
+		ProvidedInterface report{
+			[Operation]
+			report
+		}
+		ProvidedInterface manageComment{
+			[Operation]
+			createComment
+			queryComment
+			updateComment
+			modifyComment
+		}
+		RequiredInterface manageReport
+		DomainModel UserService {
+			 Entity Comment {
+				CommentId : Integer
+				Content : String
+				[Refer]
+				CommenttoNote : Note  Association
+				CommenttoHistory : History  Association
+				CommenttoCategory : Category  Association
+			}
+			 Entity Category {
+				CategoryId : Integer
+				Name : String
+				[Refer]
+			}
+			 Entity Note {
+				NoteId : Integer
+				Content : String
+				[Refer]
+			}
+			 Entity History {
+				HistoryId : Integer
+				ViewTime : Date
+				[Refer]
+			}
+		}
+	}
+	MicroService General_OperatorService {
+		ProvidedInterface modify_content{
+			[Operation]
+			modify_content
+		}
+		ProvidedInterface delete_content{
+			[Operation]
+			delete_content
+		}
+		ProvidedInterface follow_users{
+			[Operation]
+			follow_users
+		}
+		ProvidedInterface post_content{
+			[Operation]
+			post_content
+		}
+		ProvidedInterface delete_comment{
+			[Operation]
+			delete_comment
+		}
+		ProvidedInterface search_content{
+			[Operation]
+			search_content
+		}
+		ProvidedInterface browse_history{
+			[Operation]
+			browse_history
+		}
+		ProvidedInterface browse_content{
+			[Operation]
+			browse_content
+		}
+		ProvidedInterface manageArticle{
+			[Operation]
+			createArticle
+			queryArticle
+			updateArticle
+			modifyArticle
+		}
+		ProvidedInterface manageFollow{
+			[Operation]
+			createFollow
+			queryFollow
+			updateFollow
+			modifyFollow
+		}
+		RequiredInterface manageComment
+		RequiredInterface managePermission
+		DomainModel General_OperatorService {
+			 Entity Follow {
+				FollowerID : Integer
+				[Refer]
+			}
+			 Entity Article {
+				ArticleId : Integer
+				Title : String
+				Content : String
+				PublishTime : Date
+				[Refer]
+			}
+			 Entity Admin {
+				AdminId : Integer
+				[Refer]
+			}
+		}
+	}
+}

@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="ASCII"?>
+<rEMODEL:RequirementModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rEMODEL="http://www.mydreamy.net/requirementmodel/REMODEL">
+  <UseCaseModel name="LikeRead">
+    <uc name="register">
+      <ssd href="likeread.remodel#|0"/>
+      <service href="likeread.remodel#|1"/>
+    </uc>
+    <uc name="shield"/>
+    <uc name="report"/>
+    <uc name="ask_question"/>
+    <uc name="freeze_account"/>
+    <uc name="manage_home_page_push"/>
+    <uc name="permission_management"/>
+    <uc name="follow_users"/>
+    <uc name="post_content">
+      <ssd href="likeread.remodel#|2"/>
+      <service href="likeread.remodel#|3"/>
+    </uc>
+    <uc name="delete_content"/>
+    <uc name="modify_content"/>
+    <uc name="search_content"/>
+    <uc name="delete_comment"/>
+    <uc name="browse_history"/>
+    <uc name="browse_content" UCRelation="include">
+      <relateduc href="likeread.remodel#|4"/>
+      <relateduc href="likeread.remodel#|5"/>
+      <relateduc href="likeread.remodel#|6"/>
+      <relateduc href="likeread.remodel#|7"/>
+      <relateduc href="likeread.remodel#|8"/>
+    </uc>
+    <uc name="collection_content"/>
+    <uc name="post_comment"/>
+    <uc name="export_collection"/>
+    <uc name="answer_question"/>
+    <uc name="like"/>
+    <actor name="User">
+      <superActor href="likeread.remodel#|9"/>
+      <uc href="likeread.remodel#|10"/>
+      <uc href="likeread.remodel#|11"/>
+      <uc href="likeread.remodel#|12"/>
+      <uc href="likeread.remodel#|13"/>
+    </actor>
+    <actor name="Admin">
+      <superActor href="likeread.remodel#|14"/>
+      <uc href="likeread.remodel#|15"/>
+      <uc href="likeread.remodel#|16"/>
+      <uc href="likeread.remodel#|17"/>
+    </actor>
+    <actor name="General_Operator">
+      <uc href="likeread.remodel#|18"/>
+      <uc href="likeread.remodel#|19"/>
+      <uc href="likeread.remodel#|20"/>
+      <uc href="likeread.remodel#|21"/>
+      <uc href="likeread.remodel#|22"/>
+      <uc href="likeread.remodel#|23"/>
+      <uc href="likeread.remodel#|24"/>
+      <uc href="likeread.remodel#|25"/>
+    </actor>
+    <interaction name="RegisterSSD">
+      <participants href="likeread.remodel#|26"/>
+      <participants href="likeread.remodel#|27"/>
+      <messages xsi:type="rEMODEL:CallMessage" name="RegisterSSDCallMessage1">
+        <sendingEnd href="likeread.remodel#|29"/>
+        <receivingEnd href="likeread.remodel#|30"/>
+        <op href="likeread.remodel#|28"/>
+      </messages>
+      <messages xsi:type="rEMODEL:ReturnMessage" name="RegisterSSDCallMessage1Return">
+        <sendingEnd href="likeread.remodel#|31"/>
+        <receivingEnd href="likeread.remodel#|32"/>
+        <invocationMessage href="likeread.remodel#|33"/>
+      </messages>
+      <messages xsi:type="rEMODEL:CallMessage" name="RegisterSSDCallMessage3">
+        <sendingEnd href="likeread.remodel#|35"/>
+        <receivingEnd href="likeread.remodel#|36"/>
+        <op href="likeread.remodel#|34"/>
+      </messages>
+      <messages xsi:type="rEMODEL:ReturnMessage" name="RegisterSSDCallMessage3Return">
+        <sendingEnd href="likeread.remodel#|37"/>
+        <receivingEnd href="likeread.remodel#|38"/>
+        <invocationMessage href="likeread.remodel#|39"/>
+      </messages>
+      <messages xsi:type="rEMODEL:CallMessage" name="RegisterSSDCallMessage5">
+        <sendingEnd href="likeread.remodel#|41"/>
+        <receivingEnd href="likeread.remodel#|42"/>
+        <op href="likeread.remodel#|40"/>
+      </messages>
+      <messages xsi:type="rEMODEL:ReturnMessage" name="RegisterSSDCallMessage5Return">
+        <sendingEnd href="likeread.remodel#|43"/>
+        <receivingEnd href="likeread.remodel#|44"/>
+        <invocationMessage href="likeread.remodel#|45"/>
+      </messages>
+      <messages xsi:type="rEMODEL:CallMessage" name="RegisterSSDCallMessage7">
+        <sendingEnd href="likeread.remodel#|47"/>
+        <receivingEnd href="likeread.remodel#|48"/>
+        <op href="likeread.remodel#|46"/>
+      </messages>
+      <messages xsi:type="rEMODEL:ReturnMessage" name="RegisterSSDCallMessage7Return">
+        <sendingEnd href="likeread.remodel#|49"/>
+        <receivingEnd href="likeread.remodel#|50"/>
+        <invocationMessage href="likeread.remodel#|51"/>
+      </messages>
+      <executions name="RegisterSSDExecution1">
+        <owner href="likeread.remodel#|52"/>
+        <start href="likeread.remodel#|53"/>
+        <end href="likeread.remodel#|54"/>
+      </executions>
+      <executions name="RegisterSSDExecution2">
+        <owner href="likeread.remodel#|55"/>
+        <start href="likeread.remodel#|56"/>
+        <end href="likeread.remodel#|57"/>
+      </executions>
+      <executions name="RegisterSSDExecution3">
+        <owner href="likeread.remodel#|58"/>
+        <start href="likeread.remodel#|59"/>
+        <end href="likeread.remodel#|60"/>
+      </executions>
+      <executions name="RegisterSSDExecution4">
+        <owner href="likeread.remodel#|61"/>
+        <start href="likeread.remodel#|62"/>
+        <end href="likeread.remodel#|63"/>
+      </executions>
+      <ends xsi:type="rEMODEL:MessageEnd" name="RegisterSSDCallMessage5SendingEnd">
+        <context href="likeread.remodel#|64"/>
+        <message href="likeread.remodel#|65"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="RegisterSSDExecution3StartEnd">
+        <context href="likeread.remodel#|66"/>
+        <execution href="likeread.remodel#|67"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="RegisterSSDExecution3FinishEnd">
+        <context href="likeread.remodel#|68"/>
+        <execution href="likeread.remodel#|69"/>
+      </ends>
+      <ends xsi:type="rEMODEL:MessageEnd" name="RegisterSSDCallMessage5ReturnReceivingEnd">
+        <context href="likeread.remodel#|70"/>
+        <message href="likeread.remodel#|71"/>
+      </ends>
+      <ends xsi:type="rEMODEL:MessageEnd" name="RegisterSSDCallMessage1SendingEnd">
+        <context href="likeread.remodel#|72"/>
+        <message href="likeread.remodel#|73"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="RegisterSSDExecution1StartEnd">
+        <context href="likeread.remodel#|74"/>
+        <execution href="likeread.remodel#|75"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="RegisterSSDExecution1FinishEnd">
+        <context href="likeread.remodel#|76"/>
+        <execution href="likeread.remodel#|77"/>
+      </ends>
+      <ends xsi:type="rEMODEL:MessageEnd" name="RegisterSSDCallMessage1ReturnReceivingEnd">
+        <context href="likeread.remodel#|78"/>
+        <message href="likeread.remodel#|79"/>
+      </ends>
+      <ends xsi:type="rEMODEL:MessageEnd" name="RegisterSSDCallMessage3SendingEnd">
+        <context href="likeread.remodel#|80"/>
+        <message href="likeread.remodel#|81"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="RegisterSSDExecution2StartEnd">
+        <context href="likeread.remodel#|82"/>
+        <execution href="likeread.remodel#|83"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="RegisterSSDExecution2FinishEnd">
+        <context href="likeread.remodel#|84"/>
+        <execution href="likeread.remodel#|85"/>
+      </ends>
+      <ends xsi:type="rEMODEL:MessageEnd" name="RegisterSSDCallMessage3ReturnReceivingEnd">
+        <context href="likeread.remodel#|86"/>
+        <message href="likeread.remodel#|87"/>
+      </ends>
+      <ends xsi:type="rEMODEL:MessageEnd" name="RegisterSSDCallMessage7SendingEnd">
+        <context href="likeread.remodel#|88"/>
+        <message href="likeread.remodel#|89"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="RegisterSSDExecution4StartEnd">
+        <context href="likeread.remodel#|90"/>
+        <execution href="likeread.remodel#|91"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="RegisterSSDExecution4FinishEnd">
+        <context href="likeread.remodel#|92"/>
+        <execution href="likeread.remodel#|93"/>
+      </ends>
+      <ends xsi:type="rEMODEL:MessageEnd" name="RegisterSSDCallMessage7ReturnReceivingEnd">
+        <context href="likeread.remodel#|94"/>
+        <message href="likeread.remodel#|95"/>
+      </ends>
+    </interaction>
+    <interaction name="Post_contentSSD">
+      <participants href="likeread.remodel#|96"/>
+      <participants href="likeread.remodel#|97"/>
+      <messages xsi:type="rEMODEL:CallMessage" name="Post_contentSSDCallMessage1">
+        <sendingEnd href="likeread.remodel#|99"/>
+        <receivingEnd href="likeread.remodel#|100"/>
+        <op href="likeread.remodel#|98"/>
+      </messages>
+      <messages xsi:type="rEMODEL:ReturnMessage" name="Post_contentSSDCallMessage1Return">
+        <sendingEnd href="likeread.remodel#|101"/>
+        <receivingEnd href="likeread.remodel#|102"/>
+        <invocationMessage href="likeread.remodel#|103"/>
+      </messages>
+      <messages xsi:type="rEMODEL:CallMessage" name="Post_contentSSDCallMessage3">
+        <sendingEnd href="likeread.remodel#|105"/>
+        <receivingEnd href="likeread.remodel#|106"/>
+        <op href="likeread.remodel#|104"/>
+      </messages>
+      <messages xsi:type="rEMODEL:ReturnMessage" name="Post_contentSSDCallMessage3Return">
+        <sendingEnd href="likeread.remodel#|107"/>
+        <receivingEnd href="likeread.remodel#|108"/>
+        <invocationMessage href="likeread.remodel#|109"/>
+      </messages>
+      <messages xsi:type="rEMODEL:CallMessage" name="Post_contentSSDCallMessage5">
+        <sendingEnd href="likeread.remodel#|111"/>
+        <receivingEnd href="likeread.remodel#|112"/>
+        <op href="likeread.remodel#|110"/>
+      </messages>
+      <messages xsi:type="rEMODEL:ReturnMessage" name="Post_contentSSDCallMessage5Return">
+        <sendingEnd href="likeread.remodel#|113"/>
+        <receivingEnd href="likeread.remodel#|114"/>
+        <invocationMessage href="likeread.remodel#|115"/>
+      </messages>
+      <messages xsi:type="rEMODEL:CallMessage" name="Post_contentSSDCallMessage7">
+        <sendingEnd href="likeread.remodel#|117"/>
+        <receivingEnd href="likeread.remodel#|118"/>
+        <op href="likeread.remodel#|116"/>
+      </messages>
+      <messages xsi:type="rEMODEL:ReturnMessage" name="Post_contentSSDCallMessage7Return">
+        <sendingEnd href="likeread.remodel#|119"/>
+        <receivingEnd href="likeread.remodel#|120"/>
+        <invocationMessage href="likeread.remodel#|121"/>
+      </messages>
+      <messages xsi:type="rEMODEL:CallMessage" name="Post_contentSSDCallMessage9">
+        <sendingEnd href="likeread.remodel#|123"/>
+        <receivingEnd href="likeread.remodel#|124"/>
+        <op href="likeread.remodel#|122"/>
+      </messages>
+      <messages xsi:type="rEMODEL:ReturnMessage" name="Post_contentSSDCallMessage9Return">
+        <sendingEnd href="likeread.remodel#|125"/>
+        <receivingEnd href="likeread.remodel#|126"/>
+        <invocationMessage href="likeread.remodel#|127"/>
+      </messages>
+      <executions name="Post_contentSSDExecution1">
+        <owner href="likeread.remodel#|128"/>
+        <start href="likeread.remodel#|129"/>
+        <end href="likeread.remodel#|130"/>
+      </executions>
+      <executions name="Post_contentSSDExecution2">
+        <owner href="likeread.remodel#|131"/>
+        <start href="likeread.remodel#|132"/>
+        <end href="likeread.remodel#|133"/>
+      </executions>
+      <executions name="Post_contentSSDExecution3">
+        <owner href="likeread.remodel#|134"/>
+        <start href="likeread.remodel#|135"/>
+        <end href="likeread.remodel#|136"/>
+      </executions>
+      <executions name="Post_contentSSDExecution4">
+        <owner href="likeread.remodel#|137"/>
+        <start href="likeread.remodel#|138"/>
+        <end href="likeread.remodel#|139"/>
+      </executions>
+      <executions name="Post_contentSSDExecution5">
+        <owner href="likeread.remodel#|140"/>
+        <start href="likeread.remodel#|141"/>
+        <end href="likeread.remodel#|142"/>
+      </executions>
+      <ends xsi:type="rEMODEL:MessageEnd" name="Post_contentSSDCallMessage1SendingEnd">
+        <context href="likeread.remodel#|143"/>
+        <message href="likeread.remodel#|144"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="Post_contentSSDExecution1StartEnd">
+        <context href="likeread.remodel#|145"/>
+        <execution href="likeread.remodel#|146"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="Post_contentSSDExecution1FinishEnd">
+        <context href="likeread.remodel#|147"/>
+        <execution href="likeread.remodel#|148"/>
+      </ends>
+      <ends xsi:type="rEMODEL:MessageEnd" name="Post_contentSSDCallMessage1ReturnReceivingEnd">
+        <context href="likeread.remodel#|149"/>
+        <message href="likeread.remodel#|150"/>
+      </ends>
+      <ends xsi:type="rEMODEL:MessageEnd" name="Post_contentSSDCallMessage3SendingEnd">
+        <context href="likeread.remodel#|151"/>
+        <message href="likeread.remodel#|152"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="Post_contentSSDExecution2StartEnd">
+        <context href="likeread.remodel#|153"/>
+        <execution href="likeread.remodel#|154"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="Post_contentSSDExecution2FinishEnd">
+        <context href="likeread.remodel#|155"/>
+        <execution href="likeread.remodel#|156"/>
+      </ends>
+      <ends xsi:type="rEMODEL:MessageEnd" name="Post_contentSSDCallMessage3ReturnReceivingEnd">
+        <context href="likeread.remodel#|157"/>
+        <message href="likeread.remodel#|158"/>
+      </ends>
+      <ends xsi:type="rEMODEL:MessageEnd" name="Post_contentSSDCallMessage5SendingEnd">
+        <context href="likeread.remodel#|159"/>
+        <message href="likeread.remodel#|160"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="Post_contentSSDExecution3StartEnd">
+        <context href="likeread.remodel#|161"/>
+        <execution href="likeread.remodel#|162"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="Post_contentSSDExecution3FinishEnd">
+        <context href="likeread.remodel#|163"/>
+        <execution href="likeread.remodel#|164"/>
+      </ends>
+      <ends xsi:type="rEMODEL:MessageEnd" name="Post_contentSSDCallMessage5ReturnReceivingEnd">
+        <context href="likeread.remodel#|165"/>
+        <message href="likeread.remodel#|166"/>
+      </ends>
+      <ends xsi:type="rEMODEL:MessageEnd" name="Post_contentSSDCallMessage7SendingEnd">
+        <context href="likeread.remodel#|167"/>
+        <message href="likeread.remodel#|168"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="Post_contentSSDExecution4StartEnd">
+        <context href="likeread.remodel#|169"/>
+        <execution href="likeread.remodel#|170"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="Post_contentSSDExecution4FinishEnd">
+        <context href="likeread.remodel#|171"/>
+        <execution href="likeread.remodel#|172"/>
+      </ends>
+      <ends xsi:type="rEMODEL:MessageEnd" name="Post_contentSSDCallMessage7ReturnReceivingEnd">
+        <context href="likeread.remodel#|173"/>
+        <message href="likeread.remodel#|174"/>
+      </ends>
+      <ends xsi:type="rEMODEL:MessageEnd" name="Post_contentSSDCallMessage9SendingEnd">
+        <context href="likeread.remodel#|175"/>
+        <message href="likeread.remodel#|176"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="Post_contentSSDExecution5StartEnd">
+        <context href="likeread.remodel#|177"/>
+        <execution href="likeread.remodel#|178"/>
+      </ends>
+      <ends xsi:type="rEMODEL:ExecutionEnd" name="Post_contentSSDExecution5FinishEnd">
+        <context href="likeread.remodel#|179"/>
+        <execution href="likeread.remodel#|180"/>
+      </ends>
+      <ends xsi:type="rEMODEL:MessageEnd" name="Post_contentSSDCallMessage9ReturnReceivingEnd">
+        <context href="likeread.remodel#|181"/>
+        <message href="likeread.remodel#|182"/>
+      </ends>
+    </interaction>
+    <service name="LikeReadSystem"/>
+    <service name="ThirdPartyServices"/>
+    <service name="RegisterService">
+      <operation name="inputName">
+        <parameter name="name"/>
+      </operation>
+      <operation name="inputPassword">
+        <parameter name="password"/>
+      </operation>
+      <operation name="inputUserid">
+        <parameter name="userid"/>
+      </operation>
+      <operation name="createUser">
+        <parameter name="userid"/>
+        <parameter name="name"/>
+        <parameter name="password"/>
+      </operation>
+    </service>
+    <service name="Post_contentService">
+      <operation name="inputTitle">
+        <parameter name="title"/>
+      </operation>
+      <operation name="inputContent">
+        <parameter name="content"/>
+      </operation>
+      <operation name="validateInput"/>
+      <operation name="saveArticle"/>
+      <operation name="showConfirmation"/>
+    </service>
+    <contract>
+      <service href="likeread.remodel#|183"/>
+      <op name="createUser">
+        <parameter name="userid">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="Integer"/>
+        </parameter>
+        <parameter name="name">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <parameter name="password">
+          <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+        </parameter>
+        <returnType xsi:type="rEMODEL:PrimitiveTypeCS" name="Boolean"/>
+      </op>
+      <def>
+        <variable name="user">
+          <type xsi:type="rEMODEL:EntityType">
+            <entity href="likeread.remodel#|184"/>
+          </type>
+          <initExpression xsi:type="rEMODEL:LogicFormulaExpCS">
+            <atomicexp xsi:type="rEMODEL:AtomicExpression">
+              <leftside xsi:type="rEMODEL:IteratorExpCS" iterator="any">
+                <objectCall xsi:type="rEMODEL:ClassiferCallExpCS" entity="User" op="allInstance()"/>
+                <varibles name="use">
+                  <type xsi:type="rEMODEL:EntityType">
+                    <entity href="likeread.remodel#|185"/>
+                  </type>
+                </varibles>
+                <exp xsi:type="rEMODEL:LogicFormulaExpCS">
+                  <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+                    <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="UserID">
+                      <name symbol="use"/>
+                    </leftside>
+                    <rightside xsi:type="rEMODEL:VariableExpCS" symbol="userid"/>
+                  </atomicexp>
+                </exp>
+              </leftside>
+            </atomicexp>
+          </initExpression>
+        </variable>
+      </def>
+      <pre>
+        <oclexp xsi:type="rEMODEL:LogicFormulaExpCS">
+          <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+            <leftside xsi:type="rEMODEL:StandardOperationExpCS">
+              <object symbol="user"/>
+              <predefinedop xsi:type="rEMODEL:StandardNoneParameterOperation" name="oclIsUndefined()"/>
+            </leftside>
+            <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+          </atomicexp>
+        </oclexp>
+      </pre>
+      <post>
+        <oclexp xsi:type="rEMODEL:LetExpCS">
+          <variable name="use">
+            <type xsi:type="rEMODEL:EntityType">
+              <entity href="likeread.remodel#|186"/>
+            </type>
+          </variable>
+          <inExpression xsi:type="rEMODEL:LogicFormulaExpCS">
+            <atomicexp xsi:type="rEMODEL:AtomicExpression">
+              <leftside xsi:type="rEMODEL:StandardOperationExpCS">
+                <object symbol="use"/>
+                <predefinedop xsi:type="rEMODEL:StandardNoneParameterOperation" name="oclIsNew()"/>
+              </leftside>
+            </atomicexp>
+            <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+              <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="UserID">
+                <name symbol="use"/>
+              </leftside>
+              <rightside xsi:type="rEMODEL:VariableExpCS" symbol="userid"/>
+            </atomicexp>
+            <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+              <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="Name">
+                <name symbol="use"/>
+              </leftside>
+              <rightside xsi:type="rEMODEL:VariableExpCS" symbol="name"/>
+            </atomicexp>
+            <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+              <leftside xsi:type="rEMODEL:PropertyCallExpCS" attribute="Password">
+                <name symbol="use"/>
+              </leftside>
+              <rightside xsi:type="rEMODEL:VariableExpCS" symbol="password"/>
+            </atomicexp>
+            <atomicexp xsi:type="rEMODEL:AtomicExpression">
+              <leftside xsi:type="rEMODEL:StandardNavigationCallExpCS" navop="->">
+                <classifercall entity="User" op="allInstance()"/>
+                <standardOP name="includes" object="use"/>
+              </leftside>
+            </atomicexp>
+            <atomicexp xsi:type="rEMODEL:AtomicExpression" infixop="=">
+              <leftside xsi:type="rEMODEL:VariableExpCS" symbol="result"/>
+              <rightside xsi:type="rEMODEL:BooleanLiteralExpCS" symbol="true"/>
+            </atomicexp>
+            <connector>and</connector>
+            <connector>and</connector>
+            <connector>and</connector>
+            <connector>and</connector>
+            <connector>and</connector>
+          </inExpression>
+        </oclexp>
+      </post>
+    </contract>
+  </UseCaseModel>
+  <DomainModel name="LikeRead">
+    <entity isCRUD="true" name="User">
+      <attributes name="Userid">
+        <type xsi:type="rEMODEL:PrimitiveTypeCS" name="Integer"/>
+      </attributes>
+      <attributes name="Password">
+        <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+      </attributes>
+      <attributes name="Name">
+        <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+      </attributes>
+      <reference name="UsertoArticle" type="Association">
+        <entity href="likeread.remodel#|187"/>
+      </reference>
+      <reference name="UsertoFollow" type="Association">
+        <entity href="likeread.remodel#|188"/>
+      </reference>
+    </entity>
+    <entity name="Article">
+      <attributes name="ArticleId">
+        <type xsi:type="rEMODEL:PrimitiveTypeCS" name="Integer"/>
+      </attributes>
+      <attributes name="Title">
+        <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+      </attributes>
+      <attributes name="Content">
+        <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+      </attributes>
+      <attributes name="PublishTime">
+        <type xsi:type="rEMODEL:PrimitiveTypeCS" name="Date"/>
+      </attributes>
+      <reference name="ArticletoComment" type="Association">
+        <entity href="likeread.remodel#|189"/>
+      </reference>
+    </entity>
+    <entity name="Comment">
+      <attributes name="CommentId">
+        <type xsi:type="rEMODEL:PrimitiveTypeCS" name="Integer"/>
+      </attributes>
+      <attributes name="Content">
+        <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+      </attributes>
+      <reference name="CommenttoNote" type="Association">
+        <entity href="likeread.remodel#|190"/>
+      </reference>
+      <reference name="CommenttoHistory" type="Association">
+        <entity href="likeread.remodel#|191"/>
+      </reference>
+      <reference name="CommenttoReport" type="Association">
+        <entity href="likeread.remodel#|192"/>
+      </reference>
+      <reference name="CommenttoCategory" type="Association">
+        <entity href="likeread.remodel#|193"/>
+      </reference>
+    </entity>
+    <entity name="Report">
+      <attributes name="ReportId">
+        <type xsi:type="rEMODEL:PrimitiveTypeCS" name="Integer"/>
+      </attributes>
+      <attributes name="Type">
+        <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+      </attributes>
+    </entity>
+    <entity name="Admin">
+      <attributes name="AdminId">
+        <type xsi:type="rEMODEL:PrimitiveTypeCS" name="Integer"/>
+      </attributes>
+      <reference name="AdmintoPermission" type="Association">
+        <entity href="likeread.remodel#|194"/>
+      </reference>
+    </entity>
+    <entity name="Note">
+      <attributes name="NoteId">
+        <type xsi:type="rEMODEL:PrimitiveTypeCS" name="Integer"/>
+      </attributes>
+      <attributes name="Content">
+        <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+      </attributes>
+    </entity>
+    <entity name="History">
+      <attributes name="HistoryId">
+        <type xsi:type="rEMODEL:PrimitiveTypeCS" name="Integer"/>
+      </attributes>
+      <attributes name="ViewTime">
+        <type xsi:type="rEMODEL:PrimitiveTypeCS" name="Date"/>
+      </attributes>
+    </entity>
+    <entity name="Follow">
+      <attributes name="FollowerID">
+        <type xsi:type="rEMODEL:PrimitiveTypeCS" name="Integer"/>
+      </attributes>
+    </entity>
+    <entity name="Category">
+      <attributes name="CategoryId">
+        <type xsi:type="rEMODEL:PrimitiveTypeCS" name="Integer"/>
+      </attributes>
+      <attributes name="Name">
+        <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+      </attributes>
+    </entity>
+    <entity name="Permission">
+      <attributes name="Role">
+        <type xsi:type="rEMODEL:PrimitiveTypeCS" name="String"/>
+      </attributes>
+    </entity>
+  </DomainModel>
+</rEMODEL:RequirementModel>

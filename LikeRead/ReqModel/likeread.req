@@ -1,0 +1,205 @@
+UseCaseModel LikeRead { UseCaseContext UserService { UC :: shield UC :: like UC :: ask_question UC :: export_collection UC :: answer_question UC :: collection_content UC :: post_comment UC :: report } UseCaseContext AdminService { UC :: permission_management UC :: freeze_account UC :: manage_home_page_push } UseCaseContext General_OperatorService { UC :: modify_content UC :: delete_content UC :: follow_users UC :: post_content definedBySSD(Post_contentSSD) relatedService(Post_contentService) UC :: delete_comment UC :: search_content UC :: browse_history UC :: browse_content include collection_content, post_comment, export_collection, answer_question, like } UseCaseContext EntityContext { UC :: register definedBySSD(RegisterSSD) relatedService(RegisterService) }
+
+	Actor User extends General_Operator {
+		register
+		shield
+		report
+		ask_question
+	}
+
+	Actor Admin extends General_Operator {
+		freeze_account
+		manage_home_page_push
+		permission_management
+	}
+
+	Actor General_Operator {
+		follow_users
+		post_content
+		delete_content
+		modify_content
+		search_content
+		delete_comment
+		browse_history
+		browse_content
+	}
+
+	Interaction RegisterSSD {
+
+		[Participants: User RegisterService]
+
+		CallMessage::RegisterSSDCallMessage1(inputName RegisterSSDCallMessage1SendingEnd -> RegisterSSDExecution1StartEnd)
+		ReturnMessage::RegisterSSDCallMessage1Return(RegisterSSDExecution1FinishEnd -> RegisterSSDCallMessage1ReturnReceivingEnd RegisterSSDCallMessage1)
+		CallMessage::RegisterSSDCallMessage3(inputPassword RegisterSSDCallMessage3SendingEnd -> RegisterSSDExecution2StartEnd)
+		ReturnMessage::RegisterSSDCallMessage3Return(RegisterSSDExecution2FinishEnd -> RegisterSSDCallMessage3ReturnReceivingEnd RegisterSSDCallMessage3)
+		CallMessage::RegisterSSDCallMessage5(inputUserid RegisterSSDCallMessage5SendingEnd -> RegisterSSDExecution3StartEnd)
+		ReturnMessage::RegisterSSDCallMessage5Return(RegisterSSDExecution3FinishEnd -> RegisterSSDCallMessage5ReturnReceivingEnd RegisterSSDCallMessage5)
+		CallMessage::RegisterSSDCallMessage7(createUser RegisterSSDCallMessage7SendingEnd -> RegisterSSDExecution4StartEnd)
+		ReturnMessage::RegisterSSDCallMessage7Return(RegisterSSDExecution4FinishEnd -> RegisterSSDCallMessage7ReturnReceivingEnd RegisterSSDCallMessage7)
+
+		Execution::RegisterSSDExecution1(RegisterService RegisterSSDExecution1StartEnd RegisterSSDExecution1FinishEnd)
+		Execution::RegisterSSDExecution2(RegisterService RegisterSSDExecution2StartEnd RegisterSSDExecution2FinishEnd)
+		Execution::RegisterSSDExecution3(RegisterService RegisterSSDExecution3StartEnd RegisterSSDExecution3FinishEnd)
+		Execution::RegisterSSDExecution4(RegisterService RegisterSSDExecution4StartEnd RegisterSSDExecution4FinishEnd)
+
+		MessageEnd::RegisterSSDCallMessage5SendingEnd(User RegisterSSDCallMessage5)
+		ExecutionEnd::RegisterSSDExecution3StartEnd(RegisterService RegisterSSDExecution3)
+		ExecutionEnd::RegisterSSDExecution3FinishEnd(RegisterService RegisterSSDExecution3)
+		MessageEnd::RegisterSSDCallMessage5ReturnReceivingEnd(User RegisterSSDCallMessage5Return)
+		MessageEnd::RegisterSSDCallMessage1SendingEnd(User RegisterSSDCallMessage1)
+		ExecutionEnd::RegisterSSDExecution1StartEnd(RegisterService RegisterSSDExecution1)
+		ExecutionEnd::RegisterSSDExecution1FinishEnd(RegisterService RegisterSSDExecution1)
+		MessageEnd::RegisterSSDCallMessage1ReturnReceivingEnd(User RegisterSSDCallMessage1Return)
+		MessageEnd::RegisterSSDCallMessage3SendingEnd(User RegisterSSDCallMessage3)
+		ExecutionEnd::RegisterSSDExecution2StartEnd(RegisterService RegisterSSDExecution2)
+		ExecutionEnd::RegisterSSDExecution2FinishEnd(RegisterService RegisterSSDExecution2)
+		MessageEnd::RegisterSSDCallMessage3ReturnReceivingEnd(User RegisterSSDCallMessage3Return)
+		MessageEnd::RegisterSSDCallMessage7SendingEnd(User RegisterSSDCallMessage7)
+		ExecutionEnd::RegisterSSDExecution4StartEnd(RegisterService RegisterSSDExecution4)
+		ExecutionEnd::RegisterSSDExecution4FinishEnd(RegisterService RegisterSSDExecution4)
+		MessageEnd::RegisterSSDCallMessage7ReturnReceivingEnd(User RegisterSSDCallMessage7Return)
+
+	}
+
+	Interaction Post_contentSSD {
+
+		[Participants: General_Operator Post_contentService]
+
+		CallMessage::Post_contentSSDCallMessage1(inputTitle Post_contentSSDCallMessage1SendingEnd -> Post_contentSSDExecution1StartEnd)
+		ReturnMessage::Post_contentSSDCallMessage1Return(Post_contentSSDExecution1FinishEnd -> Post_contentSSDCallMessage1ReturnReceivingEnd Post_contentSSDCallMessage1)
+		CallMessage::Post_contentSSDCallMessage3(inputContent Post_contentSSDCallMessage3SendingEnd -> Post_contentSSDExecution2StartEnd)
+		ReturnMessage::Post_contentSSDCallMessage3Return(Post_contentSSDExecution2FinishEnd -> Post_contentSSDCallMessage3ReturnReceivingEnd Post_contentSSDCallMessage3)
+		CallMessage::Post_contentSSDCallMessage5(validateInput Post_contentSSDCallMessage5SendingEnd -> Post_contentSSDExecution3StartEnd)
+		ReturnMessage::Post_contentSSDCallMessage5Return(Post_contentSSDExecution3FinishEnd -> Post_contentSSDCallMessage5ReturnReceivingEnd Post_contentSSDCallMessage5)
+		CallMessage::Post_contentSSDCallMessage7(saveArticle Post_contentSSDCallMessage7SendingEnd -> Post_contentSSDExecution4StartEnd)
+		ReturnMessage::Post_contentSSDCallMessage7Return(Post_contentSSDExecution4FinishEnd -> Post_contentSSDCallMessage7ReturnReceivingEnd Post_contentSSDCallMessage7)
+		CallMessage::Post_contentSSDCallMessage9(showConfirmation Post_contentSSDCallMessage9SendingEnd -> Post_contentSSDExecution5StartEnd)
+		ReturnMessage::Post_contentSSDCallMessage9Return(Post_contentSSDExecution5FinishEnd -> Post_contentSSDCallMessage9ReturnReceivingEnd Post_contentSSDCallMessage9)
+
+		Execution::Post_contentSSDExecution1(Post_contentService Post_contentSSDExecution1StartEnd Post_contentSSDExecution1FinishEnd)
+		Execution::Post_contentSSDExecution2(Post_contentService Post_contentSSDExecution2StartEnd Post_contentSSDExecution2FinishEnd)
+		Execution::Post_contentSSDExecution3(Post_contentService Post_contentSSDExecution3StartEnd Post_contentSSDExecution3FinishEnd)
+		Execution::Post_contentSSDExecution4(Post_contentService Post_contentSSDExecution4StartEnd Post_contentSSDExecution4FinishEnd)
+		Execution::Post_contentSSDExecution5(Post_contentService Post_contentSSDExecution5StartEnd Post_contentSSDExecution5FinishEnd)
+
+		MessageEnd::Post_contentSSDCallMessage1SendingEnd(General_Operator Post_contentSSDCallMessage1)
+		ExecutionEnd::Post_contentSSDExecution1StartEnd(Post_contentService Post_contentSSDExecution1)
+		ExecutionEnd::Post_contentSSDExecution1FinishEnd(Post_contentService Post_contentSSDExecution1)
+		MessageEnd::Post_contentSSDCallMessage1ReturnReceivingEnd(General_Operator Post_contentSSDCallMessage1Return)
+		MessageEnd::Post_contentSSDCallMessage3SendingEnd(General_Operator Post_contentSSDCallMessage3)
+		ExecutionEnd::Post_contentSSDExecution2StartEnd(Post_contentService Post_contentSSDExecution2)
+		ExecutionEnd::Post_contentSSDExecution2FinishEnd(Post_contentService Post_contentSSDExecution2)
+		MessageEnd::Post_contentSSDCallMessage3ReturnReceivingEnd(General_Operator Post_contentSSDCallMessage3Return)
+		MessageEnd::Post_contentSSDCallMessage5SendingEnd(General_Operator Post_contentSSDCallMessage5)
+		ExecutionEnd::Post_contentSSDExecution3StartEnd(Post_contentService Post_contentSSDExecution3)
+		ExecutionEnd::Post_contentSSDExecution3FinishEnd(Post_contentService Post_contentSSDExecution3)
+		MessageEnd::Post_contentSSDCallMessage5ReturnReceivingEnd(General_Operator Post_contentSSDCallMessage5Return)
+		MessageEnd::Post_contentSSDCallMessage7SendingEnd(General_Operator Post_contentSSDCallMessage7)
+		ExecutionEnd::Post_contentSSDExecution4StartEnd(Post_contentService Post_contentSSDExecution4)
+		ExecutionEnd::Post_contentSSDExecution4FinishEnd(Post_contentService Post_contentSSDExecution4)
+		MessageEnd::Post_contentSSDCallMessage7ReturnReceivingEnd(General_Operator Post_contentSSDCallMessage7Return)
+		MessageEnd::Post_contentSSDCallMessage9SendingEnd(General_Operator Post_contentSSDCallMessage9)
+		ExecutionEnd::Post_contentSSDExecution5StartEnd(Post_contentService Post_contentSSDExecution5)
+		ExecutionEnd::Post_contentSSDExecution5FinishEnd(Post_contentService Post_contentSSDExecution5)
+		MessageEnd::Post_contentSSDCallMessage9ReturnReceivingEnd(General_Operator Post_contentSSDCallMessage9Return)
+
+	}
+
+	Service LikeReadSystem {
+
+	}
+
+	Service ThirdPartyServices {
+
+	}
+
+	Service RegisterService {
+
+		[Operation]
+		inputName(name)
+		inputPassword(password)
+		inputUserid(userid)
+		createUser(userid, name, password)
+
+	}
+
+	Service Post_contentService {
+
+		[Operation]
+		inputTitle(title)
+		inputContent(content)
+		validateInput()
+		saveArticle()
+		showConfirmation()
+
+	}
+
+	Contract RegisterService::createUser(userid : Integer, name : String, password : String) : Boolean {
+
+		definition:
+			user:User = User.allInstance()->any(use:User | use.UserID = userid)
+
+		precondition:
+			user.oclIsUndefined() = true
+
+		postcondition:
+			let use:User in
+			use.oclIsNew() and
+			use.UserID = userid and
+			use.Name = name and
+			use.Password = password and
+			User.allInstance()->includes(use) and
+			result = true
+	}
+
+}
+
+DomainModel LikeRead { EntityContext UserService { Entity Comment {
+		CommentId : Integer
+		Content : String
+	[Refer]
+		CommenttoNote : Note Association
+		CommenttoHistory : History Association
+		CommenttoReport : Report Association
+		CommenttoCategory : Category Association
+	} Entity Category {
+		CategoryId : Integer
+		Name : String
+	} Entity Note {
+		NoteId : Integer
+		Content : String
+	} Entity History {
+		HistoryId : Integer
+		ViewTime : Date
+	} } EntityContext AdminService {
+
+	Entity Report {
+		ReportId : Integer
+		Type : String
+	} Entity Permission {
+		Role : String
+	}
+
+} EntityContext General_OperatorService { Entity Follow {
+		FollowerID : Integer
+	} Entity Article {
+		ArticleId : Integer
+		Title : String
+		Content : String
+		PublishTime : Date
+	[Refer]
+		ArticletoComment : Comment Association
+	} Entity Admin {
+		AdminId : Integer
+	[Refer]
+		AdmintoPermission : Permission Association
+	} } {
+
+	@AutoCRUD Entity User {
+		Userid : Integer
+		Password : String
+		Name : String
+	[Refer]
+		UsertoArticle : Article Association
+		UsertoFollow : Follow Association
+	} } }
